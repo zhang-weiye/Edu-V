@@ -1,8 +1,13 @@
 import argparse
 import logging
-from .types import State
-from .builder import create_image_generation_graph
+from .graph.types import State
+from .graph.builder import create_image_generation_graph
 
+
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+)
 logger = logging.getLogger(__name__)
 
 parser = argparse.ArgumentParser(description="Image generation Function")

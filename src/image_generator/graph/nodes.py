@@ -4,7 +4,8 @@ import requests
 import base64
 from dotenv import load_dotenv
 from pathlib import Path
-from .types import State
+
+from src.image_generator.graph.types import State
 
 
 current_dir = Path(__file__).parent

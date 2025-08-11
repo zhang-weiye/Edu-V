@@ -2,8 +2,8 @@ import os
 
 from typing import TypedDict
 from langgraph.graph import START, END, StateGraph
-from .nodes import image_generator_node, image_save_node
-from .types import State
+from src.image_generator.graph.nodes import image_generator_node, image_save_node
+from src.image_generator.graph.types import State
 
 def create_image_generation_graph(
     api_key: str = None, 

@@ -42,6 +42,6 @@ uv run main.py
 # generate images workflow
 # go to workflow.py edit your prompt
 # then carry on following command in your shell
-python -m src.images.graph.workflow
+python -m src.image_generator.workflow
 
 ```

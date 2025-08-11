@@ -16,6 +16,7 @@ class State(MessagesState):
     image_base64: None | str  # 图片的base64编码
     num_inference_steps: None | int = 20  # 推理步数，影响图片质量和生成速度，默认20
     error: None | str  # 错误信息，如有异常则记录
+    file_path: None | str # 保存的图片路径
     
 
     

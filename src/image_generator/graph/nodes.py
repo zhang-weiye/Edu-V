@@ -105,10 +105,20 @@ def image_save_node(state: State = None) -> State:
     if not state.get("image_base64"):
         return {"error": "no image data for saving"}
     
+    logger.info("image save node is running")
+    
+    # 创建generated_images文件夹
+    current_dir = Path(__file__).parent
+    generated_images_dir = current_dir.parent / "generated_images"
+    generated_images_dir.mkdir(exist_ok=True)
+    
     # 自动生成文件名
     import time
     timestamp = int(time.time())
-    file_path = f"generated_image_{timestamp}.png"
+    
+    #把图片保存在指定文件夹中
+    file_name = f"generated_image_{timestamp}.png"
+    file_path = generated_images_dir / file_name
     
     # 解码base64并保存
     image_data = base64.b64decode(state["image_base64"])
@@ -116,7 +126,7 @@ def image_save_node(state: State = None) -> State:
         f.write(image_data)
     
     logger.info(f"image has been saved in : {file_path}")
-    return {"file_path": file_path}
+    return {"file_path": str(file_path)}
         
     
     

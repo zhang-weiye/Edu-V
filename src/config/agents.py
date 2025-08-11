@@ -1,6 +1,6 @@
 from typing import Literal
 
-LLMType = Literal["basic", "reasoning", "vision"]
+LLMType = Literal["basic", "reasoning", "vision", "image"]
 
 AGENT_LLM_MAP: dict[str, LLMType] = {
     "coordinator": "basic",

@@ -23,6 +23,7 @@ def _get_llm_type_config_keys() -> dict[str, str]:
         "reasoning": "REASONING_MODEL",
         "basic": "BASIC_MODEL",
         "vision": "VISION_MODEL",
+        "image": "IMAGE_MODEL",
     }
     
 def _get_env_llm_conf(llm_type: str) -> Dict[str, Any]:
